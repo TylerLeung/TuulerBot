@@ -5,7 +5,7 @@ import casino
 import discord
 
 
-def handle_response(message) -> str:
+def handle_response(message):
     msg = message.lower().split()
     if msg[0] == "hello":
         return 'hello bot'

@@ -5,10 +5,14 @@ import json
 async def send_msg(msg, userMsg, embed):
     try:
         reply = response.handle_response(userMsg)
-        await msg.channel.send(reply) if not embed else await msg.channel.send(embed=reply)
+        if not embed:
+            await msg.channel.send(reply)
+        else:
+            await msg.channel.send(embed=reply)
 
     except Exception as e:
-        print(e)
+        print("Error: "+ e.with_traceback())
+
 
 def run_bot():
     jsonFile = open('BOT_INFO.json', "r")
@@ -33,10 +37,10 @@ def run_bot():
 
         if userMsg[0] == '!':
             userMsg = userMsg[1:]   # remove ! from message
-            if "nhl" or "nba" in userMsg:
+            print(userMsg)
+            if "nhl" in userMsg or "nba" in userMsg:
                 await send_msg(msg, userMsg, embed=True)
             else:
                 await send_msg(msg, userMsg, embed=False)
-
 
     client.run(TOKEN)
