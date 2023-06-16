@@ -9,6 +9,8 @@ This is a personal discord bot! This allows me to get important information abou
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ## Roadmap
+- [ ] Add NBA Support
+- [ ] Add War/Higher Or Lower To Casino Games
 - [ ] Add Changelog
 - [ ] Add support for other sports
 - [ ] Add other text-based games to play
