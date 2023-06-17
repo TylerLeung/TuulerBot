@@ -11,10 +11,10 @@ This is a personal discord bot! This allows me to get important information abou
 ## Roadmap
 - [X] Add NBA Support
 - [ ] Add War/Higher Or Lower To Casino Games
+- [ ] Add buttons to view and interact easier with bot
 - [ ] Add Changelog
 - [ ] Add support for other sports
 - [ ] Add other text-based games to play
-- [ ] Add buttons to view and interact easier with bot
 
 ## Resources Used
 * [NHL Stats API Documentation] (https://gitlab.com/dword4/nhlapi/-/blob/master/stats-api.md)
