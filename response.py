@@ -234,9 +234,13 @@ def handle_response(message):
     if msg[0] == "help":
         embedMsg = discord.Embed(title="Help Commands", description="Here are the list of commands available.",
                                  colour=0xc99fdf)
-        embedMsg.add_field(name="NBA Commands", value="-", inline=True)
-        embedMsg.add_field(name="NHL Commands", value="", inline=True)
-        embedMsg.add_field(name="NBA Commands", value="", inline=True)
-        embedMsg.add_field(name="Casino Commands", value="", inline=True)
+        embedMsg.add_field(name="NBA Commands", value="- !nba scores displays the current days scores\n"
+                                                      "- !nba standings div/conf where the standings are sorted by the division or conference.", inline=True)
+        embedMsg.add_field(name="NHL Commands", value="- !nhl scores displays the current days scores\n"
+                                                      "- !nhl standings div/conf/ovr where the standings are sorted by division, by conference or by the overall standings.", inline=True)
+        embedMsg.add_field(name="Fun Commands", value="- !roll or !roll n d where n is the number of dice to roll and d is the number of sides on that dice. ex: !roll 3 6\n"
+                                                      "- !rps x where x is your choice of rock paper or scissors. ex: !rps rock", inline=True)
+        embedMsg.add_field(name="Casino Commands", value="N/A Not Implemented Yet", inline=True)
+        embedMsg.add_field(name="Admin Commands", value="- !purge (num) where (num) is the number of messages to delete. ex: !purge 5", inline=True)
 
         embedMsg.set_author(name="TuulerBot")
