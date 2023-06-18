@@ -93,14 +93,14 @@ def handle_response(message):
             else:
                 embedMsg = discord.Embed(title="NHL", description="To find information about what "
                                                                   "is going on around the league, type !nhl scores"
-                                                                  ",!nhl standings div, !nhl standings conf or !nhl standings ovr. "
+                                                                  ", !nhl standings div, !nhl standings conf or !nhl standings ovr. "
                                                                   "You can also click one of the buttons"
                                                                   "below.", colour=0xc99fdf)
                 embedMsg.set_author(name="TuulerBot")
         else:
             embedMsg = discord.Embed(title="NHL", description="To find information about what "
                                                                   "is going on around the league, type !nhl scores"
-                                                                  ",!nhl standings div, !nhl standings conf or !nhl standings ovr. "
+                                                                  ", !nhl standings div, !nhl standings conf or !nhl standings ovr. "
                                                                   "You can also click one of the buttons"
                                                                   "below.", colour=0xc99fdf)
             embedMsg.set_author(name="TuulerBot")
@@ -168,7 +168,7 @@ def handle_response(message):
                     embedMsg.set_author(name="TuulerBot")
                 else:
                     embedMsg = discord.Embed(title="NBA", description="To find information about what "
-                                                                      "is going on around the league, type !nba scores"
+                                                                      "is going on around the league, type !nba scores "
                                                                       "or !nba standings. You can also click one of the buttons"
                                                                       "below.", colour=0xc99fdf)
                     embedMsg.set_author(name="TuulerBot")
@@ -183,13 +183,13 @@ def handle_response(message):
                 embedMsg.set_author(name="TuulerBot")
             else:
                 embedMsg = discord.Embed(title="NBA", description="To find information about what "
-                                                              "is going on around the league, type !nba scores"
+                                                              "is going on around the league, type !nba scores "
                                                               "or !nba standings div or !nba standings conf. You can also click one of the buttons"
                                                               "below.", colour=0xc99fdf)
                 embedMsg.set_author(name="TuulerBot")
         else:
             embedMsg = discord.Embed(title="NBA", description="To find information about what "
-                                                              "is going on around the league, type !nba scores"
+                                                              "is going on around the league, type !nba scores "
                                                               "or !nba standings div or !nba standings conf. You can also click one of the buttons"
                                                               "below.", colour=0xc99fdf)
             embedMsg.set_author(name="TuulerBot")
@@ -230,3 +230,13 @@ def handle_response(message):
                     return "Tie! No one wins."
                 if botPick == "Paper":
                     return "You Win! Scissors beats Paper"
+
+    if msg[0] == "help":
+        embedMsg = discord.Embed(title="Help Commands", description="Here are the list of commands available.",
+                                 colour=0xc99fdf)
+        embedMsg.add_field(name="NBA Commands", value="-", inline=True)
+        embedMsg.add_field(name="NHL Commands", value="", inline=True)
+        embedMsg.add_field(name="NBA Commands", value="", inline=True)
+        embedMsg.add_field(name="Casino Commands", value="", inline=True)
+
+        embedMsg.set_author(name="TuulerBot")
