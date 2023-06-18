@@ -21,7 +21,7 @@ def handle_response(message):
                 rollOutcome = rollOutcome + str(roll) + "/" + str(numSide) + " "
             rollOutcome = rollOutcome.strip()
         else:
-            rollOutcome = str(random.randint(1,6)) + "/6"
+            rollOutcome = str(random.randint(1, 6)) + "/6"
 
         return rollOutcome
 
@@ -197,3 +197,36 @@ def handle_response(message):
 
     if msg[0] == "casino":
         pass
+
+    if msg[0] == "rps":
+        if len(msg) == 2:
+            userPick = msg[1]
+            randPick = random.randint(1, 3)
+            if randPick == 1:
+                botPick = "Rock"
+            elif randPick == 2:
+                botPick = "Scissors"
+            else:
+                botPick = "Paper"
+
+            if userPick.lower() == "rock":
+                if botPick == "Rock":
+                    return "Tie! No one wins."
+                if botPick == "Scissors:":
+                    return "You Win! Rock beats Scissors"
+                if botPick == "Paper":
+                    return "You Lose! Paper beats Rock"
+            if userPick.lower() == "paper":
+                if botPick == "Rock":
+                    return "You Win! Paper beats Rock"
+                if botPick == "Scissors:":
+                    return "You Lose! Scissors beats Paper"
+                if botPick == "Paper":
+                    return "Tie! No one wins."
+            if userPick.lower() == "scissors":
+                if botPick == "Rock":
+                    return "You Lose! Rock beats Scissors"
+                if botPick == "Scissors:":
+                    return "Tie! No one wins."
+                if botPick == "Paper":
+                    return "You Win! Scissors beats Paper"
