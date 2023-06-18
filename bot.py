@@ -39,7 +39,7 @@ def run_bot():
             userMsg = userMsg[1:]   # remove ! from message
             if "purge" in userMsg:
                 await msg.channel.purge(limit=int(userMsg.split()[1]))
-            elif "nhl" in userMsg or "nba" in userMsg or "casino" in userMsg:
+            elif "nhl" in userMsg or "nba" in userMsg or "casino" in userMsg or "help" in userMsg:
                 await send_msg(msg, userMsg, embed=True)
             else:
                 await send_msg(msg, userMsg, embed=False)

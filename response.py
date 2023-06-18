@@ -202,6 +202,7 @@ def handle_response(message):
         if len(msg) == 2:
             userPick = msg[1]
             randPick = random.randint(1, 3)
+            returnString = ""
             if randPick == 1:
                 botPick = "Rock"
             elif randPick == 2:
@@ -211,25 +212,26 @@ def handle_response(message):
 
             if userPick.lower() == "rock":
                 if botPick == "Rock":
-                    return "Tie! No one wins."
-                if botPick == "Scissors:":
-                    return "You Win! Rock beats Scissors"
+                    returnString= 'Tie! No one wins.'
+                if botPick == "Scissors":
+                    returnString= 'You Win! Rock beats Scissors'
                 if botPick == "Paper":
-                    return "You Lose! Paper beats Rock"
+                    returnString= 'You Lose! Paper beats Rock'
             if userPick.lower() == "paper":
                 if botPick == "Rock":
-                    return "You Win! Paper beats Rock"
-                if botPick == "Scissors:":
-                    return "You Lose! Scissors beats Paper"
+                    returnString= 'You Win! Paper beats Rock'
+                if botPick == "Scissors":
+                    returnString= 'You Lose! Scissors beats Paper'
                 if botPick == "Paper":
-                    return "Tie! No one wins."
+                    returnString= 'Tie! No one wins.'
             if userPick.lower() == "scissors":
                 if botPick == "Rock":
-                    return "You Lose! Rock beats Scissors"
-                if botPick == "Scissors:":
-                    return "Tie! No one wins."
+                    returnString= 'You Lose! Rock beats Scissors'
+                if botPick == "Scissors":
+                    returnString= 'Tie! No one wins.'
                 if botPick == "Paper":
-                    return "You Win! Scissors beats Paper"
+                    returnString= 'You Win! Scissors beats Paper'
+        return returnString
 
     if msg[0] == "help":
         embedMsg = discord.Embed(title="Help Commands", description="Here are the list of commands available.",
@@ -244,3 +246,4 @@ def handle_response(message):
         embedMsg.add_field(name="Admin Commands", value="- !purge (num) where (num) is the number of messages to delete. ex: !purge 5", inline=True)
 
         embedMsg.set_author(name="TuulerBot")
+        return embedMsg
