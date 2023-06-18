@@ -37,10 +37,15 @@ def run_bot():
 
         if userMsg[0] == '!':
             userMsg = userMsg[1:]   # remove ! from message
-            print(userMsg)
-            if "nhl" in userMsg or "nba" in userMsg:
+            if "purge" in userMsg:
+                await msg.channel.purge(limit=int(userMsg.split()[1]))
+            elif "nhl" in userMsg or "nba" in userMsg or "casino" in userMsg:
                 await send_msg(msg, userMsg, embed=True)
             else:
                 await send_msg(msg, userMsg, embed=False)
+
+
+
+
 
     client.run(TOKEN)

@@ -196,4 +196,10 @@ def handle_response(message):
         return embedMsg
 
     if msg[0] == "casino":
-        pass
+        embedMsg = discord.Embed(title="Casino", description="Here are a list of casino games.\n"
+                                                             "-War\n"
+                                                             "-Higher or Lower", colour=0xc99fdf)
+        embedMsg.set_author(name="TuulerBot")
+        return embedMsg
+
+
