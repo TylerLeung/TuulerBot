@@ -7,11 +7,11 @@ def getCurrentGames():
     gameList = []
     for game in gamesData['scoreboard']['games']:
         gameStatus = game['gameStatusText']
-        homeTeam = game['homeTeam']['teamCity'] + game['homeTeam']['teamName']
+        homeTeam = game['homeTeam']['teamCity'] + " " + game['homeTeam']['teamName']
         homeScore = game['homeTeam']['score']
-        awayTeam = game['awayTeam']['teamCity'] + game['awayTeam']['teamName']
+        awayTeam = game['awayTeam']['teamCity'] + " " + game['awayTeam']['teamName']
         awayScore = game['awayTeam']['score']
-        gameInfo = awayTeam + " @ " + homeTeam + " / " + awayScore + ":" + homeScore + " / " + gameStatus
+        gameInfo = awayTeam + " @ " + homeTeam + " / " + str(awayScore) + ":" + str(homeScore) + " / " + gameStatus
         gameList.append(gameInfo)
     return gameList
 

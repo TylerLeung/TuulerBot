@@ -87,21 +87,21 @@ def handle_response(message):
                 nhlScores = nhl.view_current_scores()
                 scoreString = ""
                 for score in nhlScores:
-                    scoreString = scoreString + score
+                    scoreString = scoreString + score + "\n"
                 embedMsg.add_field(name="Today's Scores", value=scoreString, inline=True)
                 embedMsg.set_author(name="TuulerBot")
             else:
                 embedMsg = discord.Embed(title="NHL", description="To find information about what "
                                                                   "is going on around the league, type !nhl scores"
                                                                   ", !nhl standings div, !nhl standings conf or !nhl standings ovr. "
-                                                                  "You can also click one of the buttons"
+                                                                  "You can also click one of the buttons "
                                                                   "below.", colour=0xc99fdf)
                 embedMsg.set_author(name="TuulerBot")
         else:
             embedMsg = discord.Embed(title="NHL", description="To find information about what "
                                                                   "is going on around the league, type !nhl scores"
                                                                   ", !nhl standings div, !nhl standings conf or !nhl standings ovr. "
-                                                                  "You can also click one of the buttons"
+                                                                  "You can also click one of the buttons "
                                                                   "below.", colour=0xc99fdf)
             embedMsg.set_author(name="TuulerBot")
         return embedMsg
@@ -178,7 +178,7 @@ def handle_response(message):
                 scoreString = ""
                 nbaScores = nba.getCurrentGames()
                 for score in nbaScores:
-                    scoreString = scoreString + score
+                    scoreString = scoreString + score + "\n"
                 embedMsg.add_field(name="Today's Scores", value=scoreString, inline=True)
                 embedMsg.set_author(name="TuulerBot")
             else:
