@@ -10,6 +10,7 @@ This is a personal discord bot! This allows me to get important information abou
 
 ## Roadmap
 - [X] Add NBA Support
+- [ ] Update NHL API
 - [ ] Add War/Higher Or Lower To Casino Games
 - [ ] Add commands to help moderation
 - [ ] Add help command to detail commands and usages
