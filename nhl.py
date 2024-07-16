@@ -1,6 +1,6 @@
 import requests
 
-API_URL = "https://statsapi.web.nhl.com/api/v1"
+API_URL = "https://api-web.nhle.com/v1"
 
 
 def view_standings_by_division():
@@ -71,7 +71,7 @@ def view_standings_by_league():
 
 
 def view_current_scores():
-    reply = requests.get(API_URL + "/schedule", params={"Content-type": "application/json"})
+    reply = requests.get(API_URL + "/score/now", params={"Content-type": "application/json"})
     data = reply.json()
     gameList = []
     for date in data["dates"]:
